@@ -1,8 +1,12 @@
+#!/usr/bin/python3
+"""making pascal triangle"""
+
 def pascal_triangle(n):
+    """function that makes pascal triangle with n of arrays """
     big = []
     
     if n <= 0:
-        return big
+        return []
     else:
         big = [[1]]
         
@@ -13,5 +17,4 @@ def pascal_triangle(n):
                     row.append(big[i-1][j-1] + big[i-1][j])
                 row.append(1)
                 big.append(row)
-                        # big[i][j] = big[i-1][j-1] + big[i-1][j]
     return big
